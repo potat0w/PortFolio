@@ -11,9 +11,9 @@ export function About() {
           <p>
             I’m a full-stack developer passionate about building clean,
             user-focused applications. Currently, I’m learning AI and Machine
-            Learning—exploring data processing, model development, and ways to
-            integrate intelligent systems into real projects. I aim to grow my
-            skills while solving real-world problems with scalable solutions.
+            Learning exploring data processing, model development, and ways to
+            integrate intelligent systems into real projects.
+           
           </p>
         </div>
       </div>
