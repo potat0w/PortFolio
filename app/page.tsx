@@ -94,7 +94,7 @@ export default function Home() {
 
       {/* Main Content */}
       <main
-        className={`main-content ${
+        className={`main-content mt-16 ${
           sidebarOpen ? "content-with-sidebar" : "content-full"
         }`}
       >

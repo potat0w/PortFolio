@@ -9,12 +9,6 @@ export function Contact() {
       icon: <Mail className="text-primary" size={20} />,
     },
     {
-      title: "Phone",
-      value: "+8801609451247",
-      link: "tel:+8801609451247",
-      icon: <Phone className="text-primary" size={20} />,
-    },
-    {
       title: "Location",
       value: "Noakhali, Bangladesh",
       link: null,

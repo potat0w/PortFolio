@@ -4,29 +4,22 @@ import { Github, ExternalLink } from "lucide-react";
 export function Projects() {
   const projects = [
     {
-      title: "OneEarth",
+      title: "Elora",
       description:
-        "AI-powered platform for wildlife conservation with species data and a cruelty-free shopping assistant. Winner of AnimalHack 2025.",
-      imageUrl: "/1.png",
-      technologies: ["Next.js", "FastAPI", "Gemini", "FAISS", "TypeScript"],
-      githubUrl: "https://github.com/kaho0/OneEarth",
-      demoUrl: "https://animal-rho-six.vercel.app/",
+        "Skincare e-commerce platform with product catalog, shopping cart, and secure checkout.",
+      imageUrl: "/4.png",
+      technologies: ["Next.js", "TypeScript", "TailwindCSS", "E-commerce"],
+      githubUrl: "https://github.com/potat0w/elora",
+      demoUrl: "https://elira-qq21.vercel.app/",
     },
     {
-      title: "VerdictAI",
+      title: "Attendly",
       description:
-        "AI-driven legal assistant offering real-time Q&A on Bangladesh law using a Gemini and FAISS backend.",
-      imageUrl: "/2.png",
-      technologies: [
-        "Next.js",
-        "FastAPI",
-        "Gemini",
-        "FAISS",
-        "TypeScript",
-        "Python",
-      ],
-      githubUrl: "https://github.com/kaho0/VerdictAI",
-      demoUrl: "https://verdict-ai-psi.vercel.app/",
+        "QR-Based Attendance Management System with React, TypeScript, Node.js, PostgreSQL, JWT authentication, QR check-ins, and role-based dashboards.",
+      imageUrl: "/5.png",
+      technologies: ["React.js", "TypeScript", "Node.js", "PostgreSQL", "JWT"],
+      githubUrl: "https://github.com/potat0w/attendly",
+      demoUrl: "https://dbms-project-mocha-eta.vercel.app/",
     },
     {
       title: "AquaFin",
@@ -88,22 +81,20 @@ export function Projects() {
       demoUrl: "https://skyla-7t80.onrender.com/",
     },
     {
-      title: "Meloo",
+      title: "VerdictAI",
       description:
-        "Music streaming platform with a clean interface and smart recommendations powered by Gemini API.",
-      imageUrl: "https://i.ibb.co.com/gMksX2g6/image.png",
-      technologies: ["React.js", "TailwindCSS", "Gemini API"],
-      githubUrl: "https://github.com/kaho0/Meloo",
-      demoUrl: "https://melobo.vercel.app/",
-    },
-    {
-      title: "Flow",
-      description:
-        "A modern web application with sleek UI and responsive design.",
-      imageUrl: "https://i.ibb.co.com/5XwxFh1s/image.png",
-      technologies: ["React.js", "TailwindCSS"],
-      githubUrl: "https://github.com/kaho0/Aura",
-      demoUrl: "https://aura-nu.vercel.app/",
+        "AI-driven legal assistant offering real-time Q&A on Bangladesh law using a Gemini and FAISS backend.",
+      imageUrl: "/2.png",
+      technologies: [
+        "Next.js",
+        "FastAPI",
+        "Gemini",
+        "FAISS",
+        "TypeScript",
+        "Python",
+      ],
+      githubUrl: "https://github.com/kaho0/VerdictAI",
+      demoUrl: "https://verdict-ai-psi.vercel.app/",
     },
   ];
 
