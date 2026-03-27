@@ -22,6 +22,24 @@ export function Projects() {
       demoUrl: "https://dbms-project-mocha-eta.vercel.app/",
     },
     {
+  title: "CliniQ",
+  description:
+    "Comprehensive clinic management system with multi-role functionality for patients, doctors, and administrators. Features appointment booking, real-time dashboards, and scalable data management.",
+  imageUrl: "https://i.ibb.co.com/ymyp4hcQ/Screenshot-from-2026-03-27-10-22-58.png",
+  technologies: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Node.js",
+    "Express",
+    "Supabase",
+    "JWT",
+    "TailwindCSS"
+  ],
+  githubUrl: "https://github.com/potat0w/CliniQ",
+  demoUrl: "https://cliiniq.vercel.app/", 
+},
+    {
       title: "AquaFin",
       description:
         "E-commerce platform for aquatic products with authentication, cart, reviews, and real-time updates.",
