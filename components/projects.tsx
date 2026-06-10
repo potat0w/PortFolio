@@ -24,7 +24,7 @@ export function Projects() {
     {
   title: "Naptec Healthcare Services",
   description:
-    "Developed a professional healthcare recruitment and staffing platform for a UK-based healthcare provider. Built responsive service pages, recruitment-focused user journeys, SEO optimization, and lead generation features to strengthen the company's online presence.",
+  "Built a healthcare recruitment platform with SEO optimization, streamlined hiring workflows, and lead generation features.",
   imageUrl:
     "https://res.cloudinary.com/dw1n6qugv/image/upload/v1781098031/naptec_cmszng.png",
   technologies: [
