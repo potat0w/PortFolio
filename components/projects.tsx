@@ -22,6 +22,22 @@ export function Projects() {
       demoUrl: "https://dbms-project-mocha-eta.vercel.app/",
     },
     {
+  title: "Naptec Healthcare Services",
+  description:
+    "Developed a professional healthcare recruitment and staffing platform for a UK-based healthcare provider. Built responsive service pages, recruitment-focused user journeys, SEO optimization, and lead generation features to strengthen the company's online presence.",
+  imageUrl:
+    "https://res.cloudinary.com/dw1n6qugv/image/upload/v1781098031/naptec_cmszng.png",
+  technologies: [
+    "Next.js",
+    "TypeScript",
+    "TailwindCSS",
+    "SEO",
+    "Responsive Design",
+    "Healthcare",
+  ],
+  demoUrl: "https://www.naptechealthcareservices.co.uk/",
+},
+    {
   title: "CliniQ",
   description:
     "Comprehensive clinic management system with multi-role functionality for patients, doctors, and administrators. Features appointment booking, real-time dashboards, and scalable data management.",
