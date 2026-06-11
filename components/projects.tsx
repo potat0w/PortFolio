@@ -59,13 +59,6 @@ const projects: Project[] = [
     image: "/2.png",
   },
   {
-    name: "AquaFin",
-    desc: "E-commerce platform for aquatic products with authentication, cart, reviews, and real-time updates.",
-    tags: ["React", "Express", "Firebase", "PostgreSQL"],
-    live: "https://aqua-fin-34ev.vercel.app/",
-    image: "/3.png",
-  },
-  {
     name: "Voyage Vista",
     desc: "Travel booking platform to explore destinations, view details, and book trips with ease.",
     tags: ["React", "Node.js", "MongoDB", "DaisyUI"],
