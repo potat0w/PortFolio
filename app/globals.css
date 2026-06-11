@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: oklch(0.16 0.005 250);
+    --foreground: oklch(0.96 0.005 250);
+    --card: oklch(0.2 0.006 250);
+    --card-foreground: oklch(0.96 0.005 250);
+    --muted: oklch(0.24 0.006 250);
+    --muted-foreground: oklch(0.68 0.01 250);
+    --accent: oklch(0.85 0.12 85);
+    --accent-foreground: oklch(0.16 0.005 250);
+    --border: oklch(1 0 0 / 8%);
+    --primary: oklch(0.96 0.005 250);
+    --primary-foreground: oklch(0.16 0.005 250);
+    --secondary: oklch(0.24 0.006 250);
+    --secondary-foreground: oklch(0.96 0.005 250);
+    --popover: oklch(0.2 0.006 250);
+    --popover-foreground: oklch(0.96 0.005 250);
+    --destructive: oklch(0.577 0.245 27.325);
+    --destructive-foreground: oklch(0.96 0.005 250);
+    --input: oklch(1 0 0 / 12%);
+    --ring: oklch(0.85 0.12 85);
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html,
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  }
+  ::selection {
+    background: var(--accent);
+    color: var(--accent-foreground);
+  }
+}
