@@ -128,7 +128,7 @@ export function Projects() {
         "Python",
       ],
       githubUrl: "https://github.com/kaho0/VerdictAI",
-      demoUrl: "https://verdict-ai-psi.vercel.app/",
+      demoUrl: "https://verdict-a-n61d.vercel.app/",
     },
   ];
 
