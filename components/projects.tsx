@@ -1,198 +1,152 @@
-import Image from "next/image";
-import { Github, ExternalLink } from "lucide-react";
+"use client"
+
+import { ArrowUpRight } from "lucide-react"
+import { Section } from "@/components/section"
+
+type Project = {
+  name: string
+  desc: string
+  tags: string[]
+  live: string
+  image: string
+  award?: string
+}
+
+const projects: Project[] = [
+  {
+    name: "OneEarth",
+    award: "Emerging Talent Award, AnimalHack 2025",
+    desc: "Winner among 190+ submissions at AnimalHack 2025. Connects consumer behavior with wildlife conservation through real-time IUCN Red List data, an AI-powered cruelty-free shopping assistant, and tools that promote sustainable, informed decision-making.",
+    tags: ["Next.js", "FastAPI", "Gemini", "FAISS", "IUCN", "TypeScript"],
+    live: "https://oneearthh.vercel.app/",
+    image: "/1.png",
+  },
+  {
+    name: "Elora",
+    desc: "Skincare e-commerce platform with product catalog, shopping cart, and secure checkout.",
+    tags: ["Next.js", "TypeScript", "TailwindCSS"],
+    live: "https://elira-qq21.vercel.app/",
+    image: "/4.png",
+  },
+  {
+    name: "Attendly",
+    desc: "QR-based attendance management with role-based dashboards and JWT authentication.",
+    tags: ["React", "Node.js", "PostgreSQL", "JWT"],
+    live: "https://dbms-project-mocha-eta.vercel.app/",
+    image: "/5.png",
+  },
+  {
+    name: "Naptec Healthcare",
+    desc: "Healthcare recruitment platform with SEO optimization, streamlined hiring workflows, and lead generation.",
+    tags: ["Next.js", "TypeScript", "TailwindCSS", "SEO"],
+    live: "https://www.naptechealthcareservices.co.uk/",
+    image:
+      "https://res.cloudinary.com/dw1n6qugv/image/upload/v1781098031/naptec_cmszng.png",
+  },
+  {
+    name: "CliniQ",
+    desc: "Clinic management system with multi-role functionality, appointment booking, and real-time dashboards.",
+    tags: ["Next.js", "Node.js", "Supabase", "JWT"],
+    live: "https://cliiniq.vercel.app/",
+    image:
+      "https://i.ibb.co.com/ymyp4hcQ/Screenshot-from-2026-03-27-10-22-58.png",
+  },
+  {
+    name: "VerdictAI",
+    desc: "AI-driven legal assistant offering real-time Q&A on Bangladesh law using Gemini and FAISS.",
+    tags: ["Next.js", "FastAPI", "Gemini", "FAISS", "Python"],
+    live: "https://verdict-a-n61d.vercel.app/",
+    image: "/2.png",
+  },
+  {
+    name: "AquaFin",
+    desc: "E-commerce platform for aquatic products with authentication, cart, reviews, and real-time updates.",
+    tags: ["React", "Express", "Firebase", "PostgreSQL"],
+    live: "https://aqua-fin-34ev.vercel.app/",
+    image: "/3.png",
+  },
+  {
+    name: "Voyage Vista",
+    desc: "Travel booking platform to explore destinations, view details, and book trips with ease.",
+    tags: ["React", "Node.js", "MongoDB", "DaisyUI"],
+    live: "https://vista-omega.vercel.app/",
+    image: "https://i.ibb.co.com/H12ph08/image.png",
+  },
+  {
+    name: "Gradiaaa",
+    desc: "Full-stack app enhancing communication and resource sharing between students and teachers.",
+    tags: ["React", "Node.js", "MongoDB", "JWT"],
+    live: "https://gradiaaa.vercel.app/",
+    image: "https://i.ibb.co.com/9k37Cqjc/image.png",
+  },
+  {
+    name: "Skylaa",
+    desc: "Real-time chat application built with the MERN stack and Socket.IO.",
+    tags: ["React", "Node.js", "MongoDB", "Socket.IO"],
+    live: "https://skyla-7t80.onrender.com/",
+    image: "https://i.ibb.co.com/bgzBhqKJ/image.png",
+  },
+  {
+    name: "My Vid",
+    desc: "YouTube-inspired app with video search, categories, and smooth playback.",
+    tags: ["React", "Node.js", "MongoDB", "DaisyUI"],
+    live: "https://you-vid-xi.vercel.app/",
+    image: "https://i.ibb.co.com/RkDfPRc3/image.png",
+  },
+]
 
 export function Projects() {
-  const projects = [
-    {
-      title: "Elora",
-      description:
-        "Skincare e-commerce platform with product catalog, shopping cart, and secure checkout.",
-      imageUrl: "/4.png",
-      technologies: ["Next.js", "TypeScript", "TailwindCSS", "E-commerce"],
-      githubUrl: "https://github.com/potat0w/elora",
-      demoUrl: "https://elira-qq21.vercel.app/",
-    },
-    {
-      title: "Attendly",
-      description:
-        "QR-Based Attendance Management System with React, TypeScript, Node.js, PostgreSQL, JWT authentication, QR check-ins, and role-based dashboards.",
-      imageUrl: "/5.png",
-      technologies: ["React.js", "TypeScript", "Node.js", "PostgreSQL", "JWT"],
-      githubUrl: "https://github.com/potat0w/attendly",
-      demoUrl: "https://dbms-project-mocha-eta.vercel.app/",
-    },
-    {
-  title: "Naptec Healthcare Services",
-  description:
-  "Built a healthcare recruitment platform with SEO optimization, streamlined hiring workflows, and lead generation features.",
-  imageUrl:
-    "https://res.cloudinary.com/dw1n6qugv/image/upload/v1781098031/naptec_cmszng.png",
-  technologies: [
-    "Next.js",
-    "TypeScript",
-    "TailwindCSS",
-    "SEO",
-    "Responsive Design",
-    "Healthcare",
-  ],
-  demoUrl: "https://www.naptechealthcareservices.co.uk/",
-},
-    {
-  title: "CliniQ",
-  description:
-    "Comprehensive clinic management system with multi-role functionality for patients, doctors, and administrators. Features appointment booking, real-time dashboards, and scalable data management.",
-  imageUrl: "https://i.ibb.co.com/ymyp4hcQ/Screenshot-from-2026-03-27-10-22-58.png",
-  technologies: [
-    "Next.js",
-    "React",
-    "TypeScript",
-    "Node.js",
-    "Express",
-    "Supabase",
-    "JWT",
-    "TailwindCSS"
-  ],
-  githubUrl: "https://github.com/potat0w/CliniQ",
-  demoUrl: "https://cliiniq.vercel.app/", 
-},
-    {
-      title: "AquaFin",
-      description:
-        "E-commerce platform for aquatic products with authentication, cart, reviews, and real-time updates.",
-      imageUrl: "/3.png",
-      technologies: [
-        "React.js",
-        "Express.js",
-        "Firebase",
-        "PostgreSQL",
-        "TailwindCSS",
-      ],
-      githubUrl: "https://github.com/kaho0/AquaFin",
-      demoUrl: "https://aqua-fin-34ev.vercel.app/",
-    },
-
-    {
-      title: "My Vid",
-      description:
-        "A YouTube-inspired app with video search, categories, and smooth playback for an engaging viewing experience.",
-      imageUrl: "https://i.ibb.co.com/RkDfPRc3/image.png",
-      technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "DaisyUI"],
-      githubUrl: "https://github.com/kaho0/My-Vid",
-      demoUrl: "https://you-vid-xi.vercel.app/",
-    },
-    {
-      title: "Voyage Vista",
-      description:
-        "Travel booking platform that lets users explore destinations, view details, and book trips with ease.",
-      imageUrl: "https://i.ibb.co.com/H12ph08/image.png",
-      technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "DaisyUI"],
-      githubUrl: "https://github.com/kaho0/Voyage-vista",
-      demoUrl: "https://vista-omega.vercel.app/",
-    },
-    {
-      title: "Gradiaaa",
-      description:
-        "Full-stack web app that enhances communication and resource sharing between students and teachers.",
-      imageUrl: "https://i.ibb.co.com/9k37Cqjc/image.png",
-      technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT"],
-      githubUrl: "https://github.com/kaho0/Gradiaaa",
-      demoUrl: "https://gradiaaa.vercel.app/",
-    },
-    {
-      title: "Skylaa",
-      description:
-        "Real-time chat application built with the MERN stack and Socket.IO for instant communication.",
-      imageUrl: "https://i.ibb.co.com/bgzBhqKJ/image.png",
-      technologies: [
-        "React.js",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-        "Socket.IO",
-        "Zustand",
-      ],
-      githubUrl: "https://github.com/kaho0/Skylaa",
-      demoUrl: "https://skyla-7t80.onrender.com/",
-    },
-    {
-      title: "VerdictAI",
-      description:
-        "AI-driven legal assistant offering real-time Q&A on Bangladesh law using a Gemini and FAISS backend.",
-      imageUrl: "/2.png",
-      technologies: [
-        "Next.js",
-        "FastAPI",
-        "Gemini",
-        "FAISS",
-        "TypeScript",
-        "Python",
-      ],
-      githubUrl: "https://github.com/kaho0/VerdictAI",
-      demoUrl: "https://verdict-a-n61d.vercel.app/",
-    },
-  ];
-
   return (
-    <div className="space-y-8">
-      <h2 className="text-3xl font-bold font-heading mb-6 text-primary">
-        Projects
-      </h2>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className="bg-secondary rounded-lg overflow-hidden border border-primary/20 hover:border-primary/50 transition-all hover:-translate-y-1 hover:shadow-lg"
+    <Section title="Selected work.">
+      <div className="grid gap-4 sm:grid-cols-2">
+        {projects.map((p) => (
+          <a
+            key={p.name}
+            href={p.live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative flex cursor-pointer flex-col rounded-2xl border border-border bg-card/40 p-5 transition-colors hover:border-foreground/40"
           >
-            <div className="relative h-48 w-full">
-              <Image
-                src={project.imageUrl || "/placeholder.svg"}
-                alt={project.title}
-                fill
-                className="object-cover"
+            <div className="relative mb-4 aspect-[16/10] overflow-hidden rounded-xl bg-gradient-to-br from-accent/20 via-muted to-background ring-1 ring-border">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={p.image}
+                alt={p.name}
+                className="h-full w-full object-cover transition-transform group-hover:scale-[1.02]"
+                loading="lazy"
+                onError={(e) => {
+                  e.currentTarget.style.display = "none"
+                }}
               />
             </div>
-            <div className="p-6">
-              <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-              <p className="text-muted-foreground mb-4">
-                {project.description}
-              </p>
-
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-2 py-1 bg-background rounded-md text-xs"
-                  >
-                    {tech}
+            <div className="flex items-start justify-between gap-3">
+              <div className="min-w-0">
+                {p.award && (
+                  <span className="mb-2 inline-block rounded-full bg-accent/15 px-2.5 py-0.5 text-[11px] font-medium text-accent">
+                    {p.award}
                   </span>
-                ))}
+                )}
+                <h3 className="font-display text-2xl tracking-tight">{p.name}</h3>
               </div>
-
-              <div className="flex gap-4">
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1 text-primary hover:underline"
-                >
-                  <Github size={16} />
-                  Code
-                </a>
-                <a
-                  href={project.demoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1 text-primary hover:underline"
-                >
-                  <ExternalLink size={16} />
-                  Live Demo
-                </a>
-              </div>
+              <ArrowUpRight
+                size={18}
+                className="mt-1 shrink-0 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground"
+              />
             </div>
-          </div>
+            <p className="mt-2 text-sm text-muted-foreground">{p.desc}</p>
+            <div className="mt-4 flex flex-wrap gap-1.5">
+              {p.tags.map((t) => (
+                <span
+                  key={t}
+                  className="rounded-full bg-muted px-2.5 py-0.5 text-[11px] text-muted-foreground"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+          </a>
         ))}
       </div>
-    </div>
-  );
+    </Section>
+  )
 }

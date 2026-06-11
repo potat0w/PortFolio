@@ -1,11 +1,12 @@
 import type React from "react"
 import "./globals.css"
 import type { Metadata } from "next"
-import { poppins, raleway } from "./fonts"
+import { instrumentSerif, inter } from "./fonts"
 
 export const metadata: Metadata = {
-  title: "Kahon | Portfolio",
-  description: "Full Stack Developer Portfolio",
+  title: "Kahon Binte Zaman, Full Stack Developer",
+  description:
+    "Full stack developer crafting clean, user-focused web applications.",
 }
 
 export default function RootLayout({
@@ -15,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${raleway.variable} font-body`}>{children}</body>
+      <body className={`${instrumentSerif.variable} ${inter.variable} font-sans`}>
+        {children}
+      </body>
     </html>
   )
 }
